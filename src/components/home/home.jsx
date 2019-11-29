@@ -72,8 +72,31 @@ class HomeComponent extends React.Component {
   }
 
   getMode(id) {
-    // most frequent
-    // console.log("mode", this.state.main.temp_min);
+    const dates = this.state.realForecast.reduce((acc, curr) => {
+      if (moment(curr.dt_txt).format("YYYY-MM-DD") !== moment(acc.dt_txt).format("YYYY-MM-DD")) {
+        acc[moment(curr.dt_txt).format("YYYY-MM-DD")] = [];
+      }
+
+      return acc;
+    }, {});
+
+    this.state.realForecast.forEach(x => {
+      const date = moment(x.dt_txt).format("YYYY-MM-DD");
+      if (dates[date]) {
+        dates[date].push(x);
+      }
+    });
+    const test = Object.keys(dates).map(x => {
+      return dates[x].reduce(function(acc, curr) {
+        const temp = Math.floor(curr.main.temp);
+
+        acc[temp] ? acc[temp]++ : (acc[temp] = 1);
+
+        return acc;
+      }, {});
+    });
+
+    console.log(test);
   }
 
   getWeather() {
@@ -113,7 +136,7 @@ class HomeComponent extends React.Component {
         });
 
         this.setState({ forecast: dates });
-        this.getMean();
+        this.getMode();
       })
 
       .catch(e => console.error(e));
