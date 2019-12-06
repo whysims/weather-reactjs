@@ -3,7 +3,7 @@ import moment from "moment";
 const APP_ID = process.env.REACT_APP_APPID
   ? process.env.REACT_APP_APPID
   : "6cd3cf4d438d90102cedea6cb1ad1b22";
-const API_URL = "http://api.openweathermap.org/data/2.5/";
+const API_URL = "https://api.openweathermap.org/data/2.5/";
 const STATUS_OK = "200";
 
 export const getWeather = async location =>
