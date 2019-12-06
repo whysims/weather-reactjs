@@ -11,7 +11,7 @@ const useStyles = makeStyles(theme => ({
     padding: "2px 4px",
     display: "flex",
     alignItems: "center",
-    width: 400
+    justifyContent: "center"
   },
   input: {
     marginLeft: theme.spacing(1),
@@ -44,7 +44,11 @@ const CitySelector = props => {
           onChange={e => setCity(e.target.value)}
           className={classes.input}
         />
-        <IconButton type="submit" aria-label="search" className={classes.iconButton}>
+        <IconButton
+          type="submit"
+          aria-label="search"
+          className={classes.iconButton}
+        >
           <SearchIcon />
         </IconButton>
       </Paper>

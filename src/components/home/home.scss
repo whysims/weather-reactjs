@@ -1,0 +1,9 @@
+.main-weather {
+    text-align: center;
+}
+
+.city-selector {
+    @media (max-width: 768px) {
+        text-align: center;
+    }
+}

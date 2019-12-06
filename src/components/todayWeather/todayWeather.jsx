@@ -1,23 +1,39 @@
-import React from "react";
-import CardContent from "@material-ui/core/CardContent";
+import React, { Fragment } from "react";
 import LocationOnIcon from "@material-ui/icons/LocationOn";
+import { animations } from "react-animation";
+import { ERROR_404 } from "../../common/const";
+import "./todayweather.scss";
+import "react-animation/dist/keyframes.css";
 
 const TodayWeather = props => {
   return (
-    <CardContent className="weather-card">
-      {props.weather && props.weather.main && (
-        <div>
-          <LocationOnIcon />
-          <h2>{props.weather.name}</h2>
+    <Fragment>
+      {props.weather &&
+      props.weather.cod !== ERROR_404 &&
+      props.weather.main ? (
+        <div className="weather-city">
+          <LocationOnIcon
+            className={"weather-city--icon"}
+            style={{ animation: animations.bounceIn }}
+          />
+          <h2 className={"weather-city--name"}>
+            {props.weather.name}, {props.weather.sys.country}
+          </h2>
 
-          <h3>{props.weather.main.temp}</h3>
+          <h3 className={"weather-city--temp"}>
+            {props.weather.main.temp}
+            <span>°C</span>
+          </h3>
           <h5>
-            Min: {props.weather.main.temp_min} - Max: {props.weather.main.temp_max} - Humidity:
-            {props.weather.main.humidity}
+            Min: {props.weather.main.temp_min} °C - Max:{" "}
+            {props.weather.main.temp_max} °C - Humidity:{" "}
+            {props.weather.main.humidity}%
           </h5>
         </div>
+      ) : (
+        <h2>No data available: {props.weather.message}</h2>
       )}
-    </CardContent>
+    </Fragment>
   );
 };
 
