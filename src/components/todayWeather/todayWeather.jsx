@@ -1,7 +1,7 @@
 import React, { Fragment } from "react";
 import LocationOnIcon from "@material-ui/icons/LocationOn";
 import { animations } from "react-animation";
-import { ERROR_404 } from "../../common/const";
+import { ERROR_404, WEATHER_ICON_URL } from "../../common/const";
 import "./todayweather.scss";
 import "react-animation/dist/keyframes.css";
 
@@ -16,9 +16,11 @@ const TodayWeather = props => {
             className={"weather-city--icon"}
             style={{ animation: animations.bounceIn }}
           />
+
           <h2 className={"weather-city--name"}>
             {props.weather.name}, {props.weather.sys.country}
           </h2>
+          <img src={WEATHER_ICON_URL(props.weather.weather[0].icon)} />
 
           <h3 className={"weather-city--temp"}>
             {props.weather.main.temp}

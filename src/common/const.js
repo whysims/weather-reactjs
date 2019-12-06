@@ -5,3 +5,5 @@ export const GET_MAX = "GET_MAX";
 export const GET_MODE = "GET_MODE";
 
 export const ERROR_404 = "404";
+export const WEATHER_ICON_URL = icon =>
+  `http://openweathermap.org/img/wn/${icon}.png`;
