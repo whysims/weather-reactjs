@@ -2,7 +2,7 @@ import React, { Fragment } from "react";
 import LocationOnIcon from "@material-ui/icons/LocationOn";
 import { animations } from "react-animation";
 import { ERROR_404 } from "../../common/const";
-import "./todayweather.scss";
+import "./todayWeather.scss";
 import "react-animation/dist/keyframes.css";
 
 const TodayWeather = props => {

@@ -4,7 +4,6 @@ import TodayWeather from "../todayWeather/todayWeather";
 import CitySelector from "../citySelector/citySelector";
 import Grid from "@material-ui/core/Grid";
 import Container from "@material-ui/core/Container";
-import StatisticsWeather from "../statisticsWeather/statisticsWeather";
 import { getWeather, getForecast } from "../../services/weather";
 import "./home.scss";
 
@@ -52,13 +51,6 @@ class HomeComponent extends React.Component {
           </Grid>
           <Grid item xs={12}>
             <FiveDaysWeather forecast={this.state.forecast} />
-          </Grid>
-          <Grid item xs={12}>
-            {/* <StatisticsWeather
-              getMin={this.getMin.bind(this)}
-              getMax={this.getMax.bind(this)}
-              getMean={this.getMean.bind(this)}
-            /> */}
           </Grid>
         </Grid>
       </Container>
