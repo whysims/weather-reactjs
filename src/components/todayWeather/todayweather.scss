@@ -1,19 +1,36 @@
 .weather-city {
-    color: #3f3f3f;
-    text-align: center;
+  color: #3f3f3f;
+  text-align: center;
 
-    .weather-city--icon {
-        color: #e021e0;
-        width: 60px;
+  .weather-city--icon {
+    color: #09b1cc;
+    font-size: 30px;
+  }
+
+  .weather-icon {
+    margin-bottom: 15px;
+    font-size: 46px;
+    color: #bbd847;
+  }
+
+  .weather-city--temp-breakdown {
+    .min {
+      margin-right: 15px;
     }
-
-    .weather-city--temp {
-        font-size: 4rem;
-        margin: 5px;
-
-        span {
-            padding-left: 10px;
-            font-size: 20px;
-        }
+    .hum {
+      display: block;
+      margin-top: 10px;
+      font-size: 90%;
     }
+  }
+
+  .weather-city--temp {
+    font-size: 4rem;
+    margin: 5px;
+
+    span {
+      padding-left: 10px;
+      font-size: 20px;
+    }
+  }
 }

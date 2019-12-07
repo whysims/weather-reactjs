@@ -15,9 +15,9 @@ const FiveDaysWeather = props => {
               <Grid item className="forecast__day" xs key={x}>
                 <h5>{moment(x).format("ddd, DD")}</h5>
                 <br />
-                <img
-                  src={WEATHER_ICON_URL(props.forecast[x].day.weather[0].icon)}
-                />
+                <i
+                  className={`wi wi-owm-${props.forecast[x].day.weather[0].id} forecast-icon`}
+                ></i>
                 <br />
                 {props.forecast[x].day.main.temp_max} °C
                 <br />
