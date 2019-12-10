@@ -1,8 +1,8 @@
 import React, { Fragment } from "react";
 import Grid from "@material-ui/core/Grid";
 import moment from "moment";
-import "./fiveDaysWeather.scss";
 import { ERROR_404 } from "../../common/const";
+import "./fiveDaysWeather.scss";
 
 const FiveDaysWeather = props => {
   return (
