@@ -1,5 +1,6 @@
 .search-form {
   transition: 500ms ease-in-out;
+
   @media (max-width: 468px) {
     &.active {
       opacity: 0;
