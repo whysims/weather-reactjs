@@ -56,6 +56,13 @@
   animation: mousewhell 2s infinite;
   box-sizing: border-box;
 }
+
+@media (max-width: 468px) {
+  .scroll-down i span {
+    bottom: 50px;
+  }
+}
+
 @-webkit-keyframes mousewhell {
   0% {
     -webkit-transform: translate(0, 0);
