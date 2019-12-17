@@ -3,6 +3,8 @@
 This small application display the weather for a searched city by the user.
 The application starts with London as the start city, its possible to search for others cities and the weather for the day along with forecast for 5 days will be displayed.
 
+Not all the files have a unit testing implemented as this was just a small application for test.
+
 In case the city searched is not found by the OpenWeatherMap API, the user will receive a message on the frontend.
 
 The data is retrieve from the OpenWeatherMap API and the data is manipulate to display the maximum and minimum temperature and the humidity.
