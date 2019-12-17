@@ -28,6 +28,7 @@
   }
 
   @media (max-width: 768px) {
+    background: linear-gradient(45deg, #04a3da, rgba(0, 0, 0, 0.5) 69%);
     flex-direction: column;
 
     .forecast__day {
