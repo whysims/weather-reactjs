@@ -5,13 +5,16 @@ import IconButton from "@material-ui/core/IconButton";
 import CardContent from "@material-ui/core/CardContent";
 import SearchIcon from "@material-ui/icons/Search";
 import Paper from "@material-ui/core/Paper";
+import "./citySelector.scss";
 
 const useStyles = makeStyles(theme => ({
   root: {
     padding: "2px 4px",
     display: "flex",
     alignItems: "center",
-    justifyContent: "center"
+    justifyContent: "center",
+    position: "relative",
+    zIndex: 11
   },
   input: {
     marginLeft: theme.spacing(1),
@@ -38,7 +41,11 @@ const CitySelector = props => {
 
   return (
     <CardContent className={classes.root}>
-      <Paper component="form" onSubmit={handleSubmit}>
+      <Paper
+        component="form"
+        className={`search-form ${props.scroll ? " active" : ""}`}
+        onSubmit={handleSubmit}
+      >
         <InputBase
           placeholder="Search for a city"
           onChange={e => setCity(e.target.value)}

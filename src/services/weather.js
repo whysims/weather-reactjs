@@ -3,7 +3,10 @@ import moment from "moment";
 const APP_ID = process.env.REACT_APP_APPID
   ? process.env.REACT_APP_APPID
   : "6cd3cf4d438d90102cedea6cb1ad1b22";
+const UNSPLASH_KEY =
+  "e48cda23f3c9d5b2e91f209fafc5ad18e345aa7aa2b1e81c2122dc4f9edf6f28";
 const API_URL = "https://api.openweathermap.org/data/2.5/";
+const UNSPLASH_URL = "https://api.unsplash.com/search/";
 const STATUS_OK = "200";
 
 const formatDate = date => moment(date).format("YYYY-MM-DD");
@@ -34,6 +37,10 @@ const getMinTemperature = values =>
       : { weather: curr.weather, main: curr.main }
   );
 
+const getRandomPhoto = list => {
+  return list[Math.floor(Math.random() * Math.floor(list.length))];
+};
+
 export const getWeather = async location =>
   await fetch(`${API_URL}weather?q=${location}&APPID=${APP_ID}&units=metric`)
     .then(res => res.json())
@@ -58,3 +65,16 @@ export const getForecast = async location =>
       return dates;
     })
     .catch(e => e);
+
+export const getPlacePhoto = async input => {
+  return fetch(
+    `${UNSPLASH_URL}photos/?page=1&orientation=landscape&query=${input}&client_id=${UNSPLASH_KEY}`
+  )
+    .then(res => res.json())
+    .then(res => {
+      if (res.results.length) {
+        return getRandomPhoto(res.results);
+      }
+    })
+    .catch(e => e);
+};

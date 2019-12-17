@@ -1,6 +1,13 @@
 .weather-city {
-  color: #3f3f3f;
+  position: relative;
+  padding: 50px 0px;
+  color: white;
   text-align: center;
+  z-index: 15;
+  transition: 500ms ease-in-out;
+  &.active {
+    transform: scale(0.8);
+  }
 
   .weather-city--icon {
     color: #09b1cc;
@@ -31,6 +38,11 @@
     span {
       padding-left: 10px;
       font-size: 20px;
+    }
+  }
+  @media (max-width: 468px) {
+    &.active {
+      opacity: 0;
     }
   }
 }
