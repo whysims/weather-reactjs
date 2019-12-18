@@ -1,5 +1,5 @@
 import moment from "moment";
-import { getWeather, getForecast } from "./weather";
+import { getWeather, getForecast, getPlacePhoto } from "./weather";
 
 const weather = {
   city: "London",
@@ -41,5 +41,22 @@ describe("Should perform the unit testing for services", () => {
 
     expect(fetch).toBeCalledTimes(2);
     expect(response).toEqual(forecast);
+  });
+
+  it("getPlacePhoto()", async () => {
+    fetch.mockImplementation(() => {
+      return Promise.resolve({
+        status: 200,
+        json: () =>
+          Promise.resolve({
+            results: [{ urls: { regular: "urlForRegularImg" } }],
+            total: 1
+          })
+      });
+    });
+    const response = await getPlacePhoto("London");
+
+    expect(response).toBeDefined();
+    expect(response.urls.regular).toBe("urlForRegularImg");
   });
 });
