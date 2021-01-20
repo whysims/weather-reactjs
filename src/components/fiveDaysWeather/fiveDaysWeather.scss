@@ -27,7 +27,7 @@
     }
   }
 
-  @media (max-width: 768px) {
+  @media (min-width: 640px) {
     background: linear-gradient(45deg, #04a3da, rgba(0, 0, 0, 0.5) 69%);
     flex-direction: column;
 

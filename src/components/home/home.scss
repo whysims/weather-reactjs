@@ -33,7 +33,7 @@
 .scroll-down i span {
   z-index: 15;
   position: absolute;
-  bottom: 40px;
+  bottom: 50px;
   left: 50%;
   width: 30px;
   height: 50px;
@@ -59,7 +59,7 @@
 
 @media (max-width: 468px) {
   .scroll-down i span {
-    bottom: 50px;
+    bottom: 70px;
   }
 }
 
