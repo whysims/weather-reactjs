@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "whysims.github.io/weather-reactjs/static/css/main.147e2a44.chunk.css",
-    "main.js": "whysims.github.io/weather-reactjs/static/js/main.74f551cf.chunk.js",
-    "main.js.map": "whysims.github.io/weather-reactjs/static/js/main.74f551cf.chunk.js.map",
-    "runtime-main.js": "whysims.github.io/weather-reactjs/static/js/runtime-main.b3a8b4d8.js",
-    "runtime-main.js.map": "whysims.github.io/weather-reactjs/static/js/runtime-main.b3a8b4d8.js.map",
-    "static/css/2.1b67b0c4.chunk.css": "whysims.github.io/weather-reactjs/static/css/2.1b67b0c4.chunk.css",
-    "static/js/2.dd887a34.chunk.js": "whysims.github.io/weather-reactjs/static/js/2.dd887a34.chunk.js",
-    "static/js/2.dd887a34.chunk.js.map": "whysims.github.io/weather-reactjs/static/js/2.dd887a34.chunk.js.map",
-    "index.html": "whysims.github.io/weather-reactjs/index.html",
-    "precache-manifest.26dbcbf3614843217857e29e48bf08b8.js": "whysims.github.io/weather-reactjs/precache-manifest.26dbcbf3614843217857e29e48bf08b8.js",
-    "service-worker.js": "whysims.github.io/weather-reactjs/service-worker.js",
-    "static/css/2.1b67b0c4.chunk.css.map": "whysims.github.io/weather-reactjs/static/css/2.1b67b0c4.chunk.css.map",
-    "static/css/main.147e2a44.chunk.css.map": "whysims.github.io/weather-reactjs/static/css/main.147e2a44.chunk.css.map",
-    "static/media/weather-icons.min.css": "whysims.github.io/weather-reactjs/static/media/weathericons-regular-webfont.ecaf8b48.svg"
+    "main.css": "/weather-reactjs/static/css/main.6943aae4.chunk.css",
+    "main.js": "/weather-reactjs/static/js/main.0b9435d7.chunk.js",
+    "main.js.map": "/weather-reactjs/static/js/main.0b9435d7.chunk.js.map",
+    "runtime-main.js": "/weather-reactjs/static/js/runtime-main.e5ea9921.js",
+    "runtime-main.js.map": "/weather-reactjs/static/js/runtime-main.e5ea9921.js.map",
+    "static/css/2.1b67b0c4.chunk.css": "/weather-reactjs/static/css/2.1b67b0c4.chunk.css",
+    "static/js/2.dd887a34.chunk.js": "/weather-reactjs/static/js/2.dd887a34.chunk.js",
+    "static/js/2.dd887a34.chunk.js.map": "/weather-reactjs/static/js/2.dd887a34.chunk.js.map",
+    "index.html": "/weather-reactjs/index.html",
+    "precache-manifest.ae22be63f2fcfa5c2fbe28ec5bfad999.js": "/weather-reactjs/precache-manifest.ae22be63f2fcfa5c2fbe28ec5bfad999.js",
+    "service-worker.js": "/weather-reactjs/service-worker.js",
+    "static/css/2.1b67b0c4.chunk.css.map": "/weather-reactjs/static/css/2.1b67b0c4.chunk.css.map",
+    "static/css/main.6943aae4.chunk.css.map": "/weather-reactjs/static/css/main.6943aae4.chunk.css.map",
+    "static/media/weather-icons.min.css": "/weather-reactjs/static/media/weathericons-regular-webfont.ecaf8b48.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.b3a8b4d8.js",
+    "static/js/runtime-main.e5ea9921.js",
     "static/css/2.1b67b0c4.chunk.css",
     "static/js/2.dd887a34.chunk.js",
-    "static/css/main.147e2a44.chunk.css",
-    "static/js/main.74f551cf.chunk.js"
+    "static/css/main.6943aae4.chunk.css",
+    "static/js/main.0b9435d7.chunk.js"
   ]
 }
